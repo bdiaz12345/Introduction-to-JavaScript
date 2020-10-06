@@ -212,8 +212,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    mile = kilometers * .621371;
+    return mile;
   }
 
 
@@ -226,8 +227,9 @@ Using the feet function below do the following:
   3. Return number of centimeters
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(feetAmount){
+    centimeters = feetAmount * 30.48;
+    return centimeters;
   }
  
 
@@ -242,9 +244,13 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(numberReceived){
+    for (let i=numberReceived; i>0; i--){
+      if (i > 0){
+      console.log(numberReceived + " bottles of soda on the wall, " + numberReceived + " bottles of soda, take one down pass it around " + (numberReceived - 1) + " bottles of soda on the wall");
+      }
+    }
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -262,8 +268,23 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(score){
+    if (score >= 90 && score <= 100){
+      letterGrade = "A";
+      return letterGrade;
+    } else if (score >= 80 && score <= 89){
+      letterGrade = "B";
+      return letterGrade;
+    } else if (score >= 70 && score <= 79){
+      letterGrade = "C";
+      return letterGrade;
+    } else if (score >= 60 && score <= 69){
+      letterGrade = "D";
+      return letterGrade;
+    } else {
+      letterGrade = "F";
+      return letterGrade;
+    }
   }
   
   
