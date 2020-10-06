@@ -249,6 +249,7 @@ function annoyingSong(numberReceived){
       if (i > 0){
       console.log(numberReceived + " bottles of soda on the wall, " + numberReceived + " bottles of soda, take one down pass it around " + (numberReceived - 1) + " bottles of soda on the wall");
       }
+      numberReceived = i - 1;
     }
 }
 
@@ -287,7 +288,7 @@ function grade(score){
     }
   }
 
-  
+
   
   
   
@@ -304,12 +305,18 @@ Using the vowelCounter function below do the following:
   HINT - you may need to study tomorrow's content on arrays 
   HINT - try looking up the .includes() method
 */
-
-
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+const vowels = ["a", "e", "i", "o", "u"]
+function vowelCounter(word) {
+  let count = 0;
+  for (let letter of word.toLowerCase()) {
+    if (vowels.includes(letter)){
+      count++;
+    }
+  }
+  return count;
+    
 }
-
+vowelCounter("stop");
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
