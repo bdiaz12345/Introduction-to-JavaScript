@@ -17,6 +17,10 @@ Do the following:
 
    HINT: no function required
 */
+var votingAge = 18;
+if (votingAge >= 18){
+  return true;
+}
 
 
 
@@ -30,7 +34,12 @@ Do the following:
 
    HINT: no function required
 */
-
+var a = 25;
+let b = 30;
+if (b > a){
+  a = 20;
+  return a;
+}
 
 
 
@@ -45,7 +54,12 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+var year = "1999";
+function number(){
+  year = Number(year);
+  return year;
+}
+number();
 
 
 
@@ -58,9 +72,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+function multiply(num1, num2){
+    answer = num1 * num2;
+    return answer;
+}
+
 
 
 
