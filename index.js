@@ -90,8 +90,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears){
+    dog = humanYears * 7;
+    return dog;
 }
 
 
@@ -123,8 +124,27 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(dogWeight, dogAge){
+    if (dogAge >= 1){
+      if (dogWeight <= 5){
+        dogFood = dogWeight * .05;
+      } else if (dogWeight >= 6 && dogWeight <= 10){
+        dogFood = dogWeight * .04;
+      } else if (dogWeight >= 11 && dogWeight <= 15){
+        dogFood = dogWeight * .03;
+      } else if (dogWeight > 15){
+        dogFood = dogWeight * .02;
+      }
+    } else if (dogAge < 1){
+      if (dogAge >= .16 && dogAge <= .33){
+        dogFood = dogWeight * .1;
+      } else if (dogAge >= .34 && dogAge <= .58){
+        dogFood = dogWeight * .05;
+      } else if (dogAge >= .59 && dogAge <= .99){
+        dogFood = dogWeight * .04;
+      }
+    }
+    return dogFood;
   }
 
 
@@ -143,8 +163,40 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
+function game(userChoice){
+    var computerChoice = Math.random();
+    if (computerChoice < .34){
+      computerChoice = "rock";
+    } else if (computerChoice >=.34 && computerChoice < .67){
+      computerChoice = "paper";
+    } else {
+      computerChoice = "scissors";
+    }
+    if (userChoice === "rock"){
+      if (userChoice === computerChoice){
+        return "tie!";
+      } else if (computerChoice === "paper"){
+        return "you lost";
+      } else {
+        return "you win";
+      }
+    } else if (userChoice === "paper"){
+      if (userChoice === computerChoice){
+        return "tie!";
+      } else if (computerChoice === "scissors"){
+        return "you lost";
+      } else {
+        return "you win";
+      }
+    } else if (userChoice === "scissors"){
+      if (userChoice === computerChoice){
+        return "tie!";
+      } else if (computerChoice === "rock"){
+        return "you lost";
+      } else {
+        return "you win";
+      }
+    }
 }
   
   
